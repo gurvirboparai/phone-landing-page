@@ -8,6 +8,24 @@
 
     <link rel="stylesheet" href="styles.css">
 
+
+    <script defer>
+        function slideDown()
+        {
+            const learn_more_btn = document.querySelector('#learn-more-btn');
+            learn_more_btn.addEventListener('mouseover', () =>  { console.log("mouseover")
+                learn_more_btn.style.animation = 'slidetop 0.75s ease-out forwards';
+            })  
+            learn_more_btn.addEventListener('mouseout', () =>{
+                learn_more_btn.style.animation = 'slidedown 0.75s ease-out forwards';
+            })
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            slideDown();
+        });
+    </script>
+
 </head>
 
 <body>
@@ -21,9 +39,21 @@
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </span>
-
+        </div>
+        <div class="center-content">
+            <div class="left-content">
+                <h2>Learn More About The New iPhone</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat placeat officiis impedit explicabo? Eius aperiam excepturi odio sunt laudantium deserunt harum optio soluta, ea enim, architecto ipsam rerum voluptatem at numquam doloribus nulla illum perspiciatis? Veniam ipsa veritatis blanditiis?   </p>
+                <a href="#" id="learn-more-btn" class="learn-more button">Learn More</a>
+            </div>
+            <div class="right-content">
+                <img src="https://media.croma.com/image/upload/v1605263642/Croma%20Assets/Communication/Mobiles/Images/8999511228446.png" alt="iPhone Product Red" width="1000px" class="phoneimage">
+            </div>
         </div>
 
+        <div class="footer">
+            <a href="https://github.com/gurvirfx" id="copyright">Made by Gurvir Boparai</a>
+        </div>
 
 
     </section>

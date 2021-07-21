@@ -5,6 +5,12 @@
     font-family: Poppins, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .section {
     height: 100vh;
     width: 100vw;
@@ -17,16 +23,12 @@
     height: 50px;
     width: 100vw;
     background-color: black;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ul {
-    position: relative;
-    top:25%;
-    left:40%;
     list-style: none;
-    display: inline-block;
-
 }
 
 li {
@@ -34,16 +36,161 @@ li {
     margin: 0px 40px;
 }
 
+li:hover {
+    color:#B00E23;
+    transition: color 0.75s;
+}
+
 #left {
-    position: relative;
-    top: 25%;
-    right: 20%;
-
+    margin-left: 8%;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+#right {
+    margin-right: 13.5%;
 }
+
+.center-content {
+    display: flex;
+    height: 550px;
+    width: 100vw;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.left-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-left: 110px;
+    z-index: 999;
+}
+
+.right-content {
+    margin-left: 250px;
+    z-index: 0;
+}
+
+.phoneimage {
+    max-width: 75%;
+    margin-top: 55px;   
+}
+
+h2 {
+    width: 300px;
+    max-width: 100%;
+}
+
+p {
+    width: 500px;
+    max-width: 100%;
+}
+
+.learn-more{
+    margin-top: 20px;
+    margin-bottom: 190px;
+    margin-left: 35%;
+    background-color: black;
+    padding: 10px 10px;
+}
+
+@-webkit-keyframes slidetop {
+    from{
+        margin-top:20px;
+    }
+    to{
+      background: white;
+      color: #B00E23;
+      margin-top: 0px;
+    }
+  }
+  
+  @keyframes slidetop{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+      background: white;
+      color: #B00E23;
+      transform: translateY(-15px);
+    }
+  }
+  
+  @-webkit-keyframes slidedown {
+    from{
+      background: white;
+      color:#B00E23;
+      top: 10px;
+    }
+    to{
+        top:20px;
+    }
+  }
+  
+  @keyframes slidedown{
+    from{
+      background: white;
+      color: #B00E23;
+      top: 10px;
+    }
+    to{
+        top:20px;
+    }
+  }
+
+  .footer {
+      display: flex;
+      max-width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #copyright {
+      color: white;
+      transition: color 1s;
+  }
+
+  #copyright:hover {
+      color:black;
+      transition: color 1s;
+  }
+
+
+
+  @media only screen and (max-width: 1000px){
+      .center-content {
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+      h2 {
+          font-size: medium;
+          max-width: 50%;
+      }
+      p {
+          font-size: small;
+          max-width: 75%;
+      }
+      #left{
+          font-size: small;
+      }
+      #right {
+          font-size: smaller;
+          width: 500px;
+      }
+      .phoneimage {
+          width: 50%;
+          margin-top: -150px;
+      }
+      .menubar{
+          max-width: 100%;
+          
+      }
+
+  }
+
+  
+
+
+
+
 
 
